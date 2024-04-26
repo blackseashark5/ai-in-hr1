@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('../partials/head.html')
+</head>
+
+<body>
+    <div class="overlay-mask"></div>
+    <div class="main-wrapper @@menuVariant">
+        @@include('../partials/menu.html',{
+        'active': 'forms'
+        })
+        <div class="right-area">
+            @@include('../partials/header.html')
+            <div class="main-content container">
+                <div class="page-header">
+
+                    <span class="h2">Forms</span>
+                    <small>Fill it...</small>
+
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Basic Form
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="exampleInputEmail1">Email address</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                        <small id="emailHelp" class="form-text text-muted">We'll never share your email
+                                            with
+                                            anyone else.</small>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleInputPassword1">Password</label>
+                                        <input type="password" class="form-control" id="exampleInputPassword1">
+                                    </div>
+                                    <div class="form-group form-check">
+                                        <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                        <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Input Form with Icons
+                            </div>
+                            <div class="card-body">
+                                <form>
+
+                                    <div class="mb-3">
+                                        <label>Enter your email</label>
+                                        <div class="input-group is-invalid">
+
+                                            <div class="input-group-prepend ">
+
+                                                <span class="input-group-text bg-white">
+                                                    <i class="material-icons f-16">email</i>
+                                                </span>
+                                            </div>
+                                            <input type="text" class="form-control border-left-0" required>
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Invalid email address
+                                        </div>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label>Enter your password</label>
+                                        <div class="input-group is-invalid">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text bg-white" id="validatedInputGroupPrepend">
+                                                    <i class="material-icons f-16">lock</i>
+                                                </span>
+                                            </div>
+                                            <input type="text" class="form-control border-left-0" aria-describedby="validatedInputGroupPrepend" required>
+                                        </div>
+                                        <div class="invalid-feedback">
+                                            Password should be min 6 characters
+                                        </div>
+                                    </div>
+                                    <button type="submit" class="btn btn-primary">Submit</button>
+
+
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Checkbox
+                            </div>
+                            <div class="card-body">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+                                    <label class="form-check-label" for="defaultCheck1">
+                                        Default checkbox
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="defaultCheck2" disabled>
+                                    <label class="form-check-label" for="defaultCheck2">
+                                        Disabled checkbox
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-checkbox">
+                                    <input type="checkbox" class="custom-control-input" id="customCheckDisabled1">
+                                    <label class="custom-control-label" for="customCheckDisabled1">Check this custom
+                                        checkbox</label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Range Input
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="formControlRange">Example Range input</label>
+                                        <input type="range" class="form-control-range" id="formControlRange">
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Toggle Switches
+                            </div>
+                            <div class="card-body">
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch1">
+                                    <label class="custom-control-label" for="customSwitch1">
+                                        Toggle this switch
+                                        element
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-switch">
+                                    <input type="checkbox" class="custom-control-input" disabled id="customSwitch2">
+                                    <label class="custom-control-label" for="customSwitch2">Disabled switch
+                                        element</label>
+                                </div>
+                                <div class="custom-control custom-switch custom-switch-sm">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch3">
+                                    <label class="custom-control-label" for="customSwitch3">SM switch
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-switch custom-switch-md">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch4">
+                                    <label class="custom-control-label" for="customSwitch4">MD switch
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-switch custom-switch-lg">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch5">
+                                    <label class="custom-control-label" for="customSwitch5">
+                                        <span>LG Switch</span>
+                                    </label>
+                                </div>
+                                <div class="custom-control custom-switch custom-switch-xl">
+                                    <input type="checkbox" class="custom-control-input" id="customSwitch6">
+                                    <label class="custom-control-label" for="customSwitch6">XL Switch
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Sizing
+                            </div>
+                            <div class="card-body">
+                                <input class="form-control form-control-lg mt-3" type="text" placeholder=".form-control-lg">
+                                <input class="form-control mt-3" type="text" placeholder="Default input">
+                                <input class="form-control mt-3 form-control-sm" type="text" placeholder=".form-control-sm">
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Custom Select
+                            </div>
+                            <div class="card-body">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <label class="input-group-text" for="inputGroupSelect01">Options</label>
+                                    </div>
+                                    <select class="custom-select" id="inputGroupSelect01">
+                                        <option selected>Choose...</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <select class="custom-select" id="inputGroupSelect02">
+                                        <option selected>Choose...</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                    <div class="input-group-append">
+                                        <label class="input-group-text" for="inputGroupSelect02">Options</label>
+                                    </div>
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-outline-secondary" type="button">Button</button>
+                                    </div>
+                                    <select class="custom-select" id="inputGroupSelect03" aria-label="Example select with button addon">
+                                        <option selected>Choose...</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                </div>
+
+                                <div class="input-group">
+                                    <select class="custom-select" id="inputGroupSelect04" aria-label="Example select with button addon">
+                                        <option selected>Choose...</option>
+                                        <option value="1">One</option>
+                                        <option value="2">Two</option>
+                                        <option value="3">Three</option>
+                                    </select>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button">Button</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Custom File Input
+                            </div>
+                            <div class="card-body">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text" id="inputGroupFileAddon01">Upload</span>
+                                    </div>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="inputGroupFile01" aria-describedby="inputGroupFileAddon01">
+                                        <label class="custom-file-label" for="inputGroupFile01">Choose file</label>
+                                    </div>
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="inputGroupFile02">
+                                        <label class="custom-file-label" for="inputGroupFile02" aria-describedby="inputGroupFileAddon02">Choose file</label>
+                                    </div>
+                                    <div class="input-group-append">
+                                        <span class="input-group-text" id="inputGroupFileAddon02">Upload</span>
+                                    </div>
+                                </div>
+
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon03">Button</button>
+                                    </div>
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="inputGroupFile03" aria-describedby="inputGroupFileAddon03">
+                                        <label class="custom-file-label" for="inputGroupFile03">Choose file</label>
+                                    </div>
+                                </div>
+
+                                <div class="input-group">
+                                    <div class="custom-file">
+                                        <input type="file" class="custom-file-input" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04">
+                                        <label class="custom-file-label" for="inputGroupFile04">Choose file</label>
+                                    </div>
+                                    <div class="input-group-append">
+                                        <button class="btn btn-outline-secondary" type="button" id="inputGroupFileAddon04">Button</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Radio Buttons
+                            </div>
+                            <div class="card-body">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                    <label class="form-check-label" for="exampleRadios1">
+                                        Default radio
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                    <label class="form-check-label" for="exampleRadios2">
+                                        Second default radio
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+                                    <label class="form-check-label" for="exampleRadios3">
+                                        Disabled radio
+                                    </label>
+                                </div>
+
+
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="customRadio1" name="customRadio" class="custom-control-input" value="customOption1">
+                                    <label class="custom-control-label" for="customRadio1">Custom Radio Option 1</label>
+                                </div>
+                                <div class="custom-control custom-radio">
+                                    <input type="radio" id="customRadio2" name="customRadio" class="custom-control-input" value="customOption2">
+                                    <label class="custom-control-label" for="customRadio2">Custom Radio Option 2</label>
+                                </div>
+
+
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Form Controls
+                            </div>
+                            <div class="card-body">
+                                <form>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlInput1">Email address</label>
+                                        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com">
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect1">Example select</label>
+                                        <select class="form-control" id="exampleFormControlSelect1">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlSelect2">Example multiple select</label>
+                                        <select multiple class="form-control" id="exampleFormControlSelect2">
+                                            <option>1</option>
+                                            <option>2</option>
+                                            <option>3</option>
+                                            <option>4</option>
+                                            <option>5</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="exampleFormControlTextarea1">Example textarea</label>
+                                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('../partials/js.html')
+
+</body>
+
+</html>

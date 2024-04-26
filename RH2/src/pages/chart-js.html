@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('../partials/head.html')
+
+    @@if(preferCDN) {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.23.1/apexcharts.min.css">
+    }
+    
+    @@if(!preferCDN) {
+    <!-- build:css assets/css/vendor/chartjs.bundle.css -->
+    <link rel="stylesheet" href="../../node_modules/chart.js/dist/Chart.min.css">
+    <!-- endbuild -->
+    }
+</head>
+
+<body>
+    <div class="overlay-mask"></div>
+    <div class="main-wrapper @@menuVariant">
+        @@include('../partials/menu.html',{
+        'active': 'chart-js'
+        })
+        <div class="right-area">
+            @@include('../partials/header.html')
+            <div class="main-content container">
+                <div class="page-header">
+                    <span class="h2">Chart.js</span>
+                    <small>Chart your business...</small>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Bar Chart
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chartjs-01" class="chart-canvas"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Line Chart
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chartjs-02" class="chart-canvas"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Radar
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chartjs-03" class="chart-canvas"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-12 col-lg-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Bar Line Combo
+                            </div>
+                            <div class="card-body">
+                                <canvas id="chartjs-04" class="chart-canvas"></canvas>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('../partials/js.html')
+
+    @@if(preferCDN){
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    }
+
+    @@if(!preferCDN){
+    <!-- build:js assets/js/vendor/chart-js-bundle.js -->
+    <script src="../../node_modules/chart.js/dist/Chart.bundle.min.js"></script>
+    <!-- endbuild -->
+    }
+    <!-- build:js assets/js/demo/chartjs.js -->
+    <script src="../assets/js/demo/chartjs-utils.js"></script>
+    <script src="../assets/js/demo/chartjs.js"></script>
+    <!-- endbuild -->
+    <script>
+
+    </script>
+</body>
+
+</html>

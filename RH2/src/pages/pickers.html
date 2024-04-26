@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('../partials/head.html')
+
+    @@if(preferCDN) {
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/pickerjs@1.2.1/dist/picker.min.css">
+    }
+
+    @@if(!preferCDN) {
+    <!-- build:css assets/css/vendor/pickers.bundle.css -->
+    <link rel="stylesheet" href="../../node_modules/pickerjs/dist/picker.min.js">
+    <link rel="stylesheet" href="../../node_modules/@jaames/iro/dist/iro.min.js">
+    <!-- endbuild -->
+    }
+</head>
+
+<body>
+    <div class="overlay-mask"></div>
+    <div class="main-wrapper @@menuVariant">
+        @@include('../partials/menu.html',{
+        'active': 'pickers'
+        })
+        <div class="right-area">
+            @@include('../partials/header.html')
+            <div class="main-content container">
+                <div class="page-header">
+                    <span class="h2">Pickers</span>
+                    <small>Pick Date time</small>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Basic Date time Picker
+                            </div>
+                            <div class="card-body">
+                                <input type="date" class="form-control" id="basic_input">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Date Picker
+                            </div>
+                            <div class="card-body">
+                                <input type="date" class="form-control" id="date_input">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Time Picker
+                            </div>
+                            <div class="card-body">
+                                <input type="date" class="form-control" id="time_input">
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="page-header mt-4">
+                    <span class="h2">Color Pickers</span>
+                    <small>Pick your favourite color</small>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12  col-md-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Color Picker
+                            </div>
+                            <div class="card-body">
+                                <input type="color" class="form-control" value="#414288">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Color Wheel Picker
+                            </div>
+                            <div class="card-body">
+                                <div class="wheel mx-auto" id="colorWheelDemo"></div>
+                                <label class="mt-3">Selected Color</label>
+                                <input type="text" class="form-control" name="color" id="selected_color" disabled>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    @@include('../partials/js.html')
+
+    @@if(preferCDN){
+    <script src="https://cdn.jsdelivr.net/npm/pickerjs@1.2.1/dist/picker.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@jaames/iro@5"></script>
+    }
+
+    @@if(!preferCDN){
+    <!-- build:js assets/js/vendor/pickers.js -->
+    <script src="../../node_modules/pickerjs/dist/picker.min.js"></script>
+    <script src="../../node_modules/@jaames/iro/dist/iro.min.js"></script>
+    <!-- endbuild -->
+    }
+
+    <!-- build:js assets/js/demo/pickers.js -->
+    <script src="../assets/js/demo/pickers.js"></script>
+    <!-- endbuild -->
+
+</body>
+
+</html>

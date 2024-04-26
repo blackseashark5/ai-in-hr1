@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('../partials/head.html')
+</head>
+
+<body>
+    <div class="overlay-mask"></div>
+    <div class="main-wrapper @@menuVariant">
+        @@include('../partials/menu.html',{
+        'active': 'vector-maps'
+        })
+        <div class="right-area">
+            @@include('../partials/header.html')
+            <div class="main-content container">
+                <div class="page-header">
+                    <span class="h2">Vector Maps</span>
+                    <small>Let's get started</small>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                World Vector Map
+                            </div>
+                            <div class="card-body">
+                                <div class="map-container">
+                                    <div class="map">Loading content...</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12">
+                        <div class="card shadow">
+                            <div class="card-header bg-secondary text-white">
+                                Plotted Vector Map
+                            </div>
+                            <div class="card-body bg-secondary">
+                              
+                                <div class="mapcontainer">
+                                    <div style="margin:auto;">
+                                        <div class="population" style="float:left;margin-right:40px;">
+                                            <span>Alternative content for the legend</span>
+                                        </div>
+                                        <div class="density" style="float:left;">
+                                            <span>Alternative content for the legend2</span>
+                                        </div>
+                                        <div style="clear:both;"></div>
+                                    </div>
+                                    <div class="map">Alternative content</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    @@include('../partials/js.html')
+    @@if(preferCDN) {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/raphael/2.3.0/raphael.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-mapael/2.2.0/js/jquery.mapael.min.js"></script>
+    }
+
+    @@if(!preferCDN) {
+    <!-- build:js assets/js/vendor/vector.js -->
+    <script src="../../node_modules/raphael/raphael.js"></script>
+    <script src="../../node_modules/jquery-mapael/js/jquery.mapael.js"></script>
+    <!-- endbuild -->
+    }
+    <!-- build:js assets/js/demo/vector.js -->
+    <script src="../assets/js/demo/usa_states.js"></script>
+    <script src="../assets/js/demo/vector-maps.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>

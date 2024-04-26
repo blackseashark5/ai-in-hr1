@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('../partials/head.html')
+
+    @@if(preferCDN) {
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/css/dropify.min.css" rel="stylesheet">
+    }
+
+    @@if(!preferCDN) {
+    <!-- build:css assets/css/vendor/uploaders.bundle.css -->
+    <link rel="stylesheet" href="../../node_modules/dropify/dist/css/dropify.min.css">
+    <!-- endbuild -->
+    }
+</head>
+
+<body>
+    <div class="overlay-mask"></div>
+    <div class="main-wrapper @@menuVariant">
+        @@include('../partials/menu.html',{
+        'active': 'uploaders'
+        })
+        <div class="right-area">
+            @@include('../partials/header.html')
+            <div class="main-content container">
+                <div class="page-header">
+                    <span class="h2">Uploaders</span>
+                    <small>Let's connect with cloud</small>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Drop Zone
+                            </div>
+                            <div class="card-body">
+                                <input type="file" class="dropify" data-height="200" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Size Limit (3M)
+                            </div>
+                            <div class="card-body">
+                                <input type="file" class="dropify" data-max-file-size="3M" data-height="200" />
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Specific File Types (PDF / PNG / PSD)
+                            </div>
+                            <div class="card-body">
+                                <input type="file" class="dropify" data-allowed-file-extensions="pdf png psd" />
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-12 col-md-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Default Image
+                            </div>
+                            <div class="card-body">
+                                <input type="file" class="dropify"
+                                    data-default-file="assets/images/avatar/team-1.jpg" />
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('../partials/js.html')
+
+    @@if(preferCDN) {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Dropify/0.2.2/js/dropify.min.js"></script>
+    }
+
+    @@if(!preferCDN) {
+    <!-- build:js assets/js/vendor/dropify.js -->
+    <script src="../../node_modules/dropify/dist/js/dropify.min.js"></script>
+    <!-- endbuild -->
+    }
+
+    <!-- build:js assets/js/demo/uploaders.js -->
+    <script src="../assets/js/demo/uploaders.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('../partials/head.html')
+</head>
+
+<body>
+    <div class="overlay-mask"></div>
+    <div class="main-wrapper @@menuVariant">
+        @@include('../partials/menu.html',{
+        'active': 'google-maps'
+        })
+        <div class="right-area">
+            @@include('../partials/header.html')
+            <div class="main-content container">
+                <div class="page-header">
+                    <span class="h2">Maps</span>
+                    <small>Direct yourself...</small>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Google Maps
+                            </div>
+                            <div class="card-body">
+                                <div id="map" style="height:450px;width:100%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('../partials/js.html')
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script>
+    <script>
+        var map;
+        function initMap() {
+            map = new google.maps.Map(document.getElementById('map'), {
+                center: {
+                    lat: -34.397,
+                    lng: 150.644
+                },
+                zoom: 8
+            });
+        }
+    </script>
+
+</body>
+
+</html>

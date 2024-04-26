@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    @@include('../partials/head.html')
+    @@if(preferCDN) {
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/apexcharts/3.23.1/apexcharts.min.css">
+    }
+    @@if(!preferCDN) {
+    <!-- build:css assets/css/vendor/apex-charts.bundle.css -->
+    <link rel="stylesheet" href="../../node_modules/apexcharts/dist/apexcharts.css">
+    <!-- endbuild -->
+    }
+</head>
+
+<body>
+    <div class="overlay-mask"></div>
+    <div class="main-wrapper @@menuVariant">
+        @@include('../partials/menu.html',{
+        'active': 'apex-charts'
+        })
+        <div class="right-area">
+            @@include('../partials/header.html')
+            <div class="main-content container">
+
+                <div class="page-header">
+                    <span class="h2">Apex Charts</span>
+                    <small>Statistics on your fingertips...</small>
+                </div>
+                <div class="row">
+                    <div class="col-12 col-sm-12">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Mixed Charts
+                            </div>
+                            <div class="card-body">
+                                <div id="line-column-area-chart"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Bar Chart
+                            </div>
+                            <div class="card-body">
+                                <div id="chart-bar"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Area Chart
+                            </div>
+                            <div class="card-body">
+                                <div id="chart-area"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-12 col-sm-12">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Candle Stick Chart
+                            </div>
+                            <div class="card-body">
+                                <div id="candle-stick-chart">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Line Chart
+                            </div>
+                            <div class="card-body">
+                                <div id="chart">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Donut
+                            </div>
+                            <div class="card-body">
+                                <div id="chart-donut"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6">
+                        <div class="card shadow">
+                            <div class="card-header bg-white">
+                                Radar
+                            </div>
+                            <div class="card-body">
+                                <div id="chart-radar"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @@include('../partials/js.html')
+    @@if(preferCDN){
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    }
+
+    @@if(!preferCDN){
+    <!-- build:js assets/js/vendor/apex-chart-bundle.js -->
+    <script src="../../node_modules/apexcharts/dist/apexcharts.min.js"></script>
+    <!-- endbuild -->
+    }
+
+    <!-- build:js assets/js/demo/apexcharts.js -->
+    <script src="../assets/js/demo/apexcharts-demo.js"></script>
+    <!-- endbuild -->
+
+</body>
+
+</html>
